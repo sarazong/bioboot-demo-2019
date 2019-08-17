@@ -1,11 +1,6 @@
 # bioboot-demo-2019
 Live demo material for Biocomputing Bootcamp in 2019
 
-1. Create README.md
-
-# demo-github-2019
-An example for students of Biocomputing bootcamp.
-
 Please use this repo to inspect how GitHub presents commit history and their associated differences.
 
 Note that this is a Markdown format text file. These are often used for documentation purposes as they allow easy text formatting and are rendered nicely by both GitHub and Bitbucket.
