@@ -4,9 +4,9 @@ Live demo material for Biocomputing Bootcamp in 2019
 > Side-Note: This README.md file was written as a Markdown format text file. These are often used for documentation purposes as they allow easy text formatting and are rendered nicely by both GitHub and Bitbucket. To learn more about markdown on your own time visit [markdown-basics](https://help.github.com/en/articles/basic-writing-and-formatting-syntax) and optionally [mastering-markdown](https://guides.github.com/features/mastering-markdown).
 
 ### Directions
-For this second _hands-on_ GitHub demo please complete the steps in each of the 3 sections below and remember to feel free to talk to your neighbors and ask questions as you go: 
+For this second _hands-on_ GitHub demo please complete the steps in each of the sections below and remember to feel free to talk to your neighbors and ask questions as you go: 
 
-## 1.  Collaborating on GitHub
+## Collaborating on GitHub
 There are two basic models for collaborating on GitHub. These are known as the **Shared repository model** and the **Fork & pull model** (often just referred to as **Pull requests**).
 
 
@@ -20,32 +20,47 @@ You already have a cone of this repo on your local machine from step one above t
 
 > Side-Note: If you were added as a 'collaborator' on the repo then you would be able to **git push origin master**, in the same way you did for your own repo in demo1, and contribute your changes directly. This is simply the **shared repository model** and you can create your own by adding 'collaborators' to your own GitHub repos under the *Settings* link. For now we focus on the more complicated but common **fork and pull** approach. 
 
-
 Below we will explore the **fork & pull** approach as it can be used with any public repo on GitHub.
 
-## 2. Collaborating with remote repos.
+## Try Shared Repository Model
 
-- Now partner with the person beside you and decide on **ONE repo** that you would like to collaborate on (i.e. the person on the right).
+- Now partner with the person next to you. 
+  - If your table has an odd number of people, three people can team up
+  as one.
+- Determine who will be the **owner** of the repository. Only one
+  person per team can be the owner, and each team will be working with
+  only **one repo**.
 
-#### If you are owner of this **One repo**
+#### If you are owner of this **one repo**
+- Create a GitHub repo, for example, **bioboot-share-2019**, with your
+  GitHub account. 
+  - Make sure to create a README file so that the repo is not empty.
+  - If you want, feel free to make a simple change, such as editing
+    README or adding another file.
 - Add the other person as a collaborator to your GitHub repo.
-- Ask for the **username** of the person you're adding as a collaborator. 
-- On GitHub, navigate to the main page of the repository.
-- In the repository's right sidebar, click  **Settings** (it looks like a little gear icon)
-- Click the "**Collaborators**" tab.
-- Start typing the collaborator's username.
-- Select the user from the drop-down menu.
-- Click **Add**.
+  - Ask for the **username** of the person you're adding as a collaborator. 
+  - On GitHub, navigate to the main page of the repository.
+  - In the repository's right sidebar, click  **Settings** (it looks like a little gear icon)
+  - Click the "**Collaborators**" tab.
+  - Start typing the collaborator's username.
+  - Select the user from the drop-down menu.
+  - Click **Add**.
+- Wait for your collaborator to make changes
 
 #### If you are the collaborator to this repo
+- Accept invitation as collaborator by checking your email and
+  responding to the invitation.
+- Visit the owner's github repo
+  (e.g. https://github.com/OWNER-USERNAME/bioboot-share-2019), and
+  make changes in the README or other file(s).
 - Clone your partners repo by getting the URL from your partners GitHub page (`git clone <URL>`).
 - Modify some of the files (for example add some content to the **ToDo.md** file)
 - Go through the regular git add/git commit cycle.
-- Push these changes to GitHub with `git push -u origin master`
+- Commit and push these changes to GitHub with `git commit` and `git push`
 
 Congratulations! you have now contributed to a shared collaborative repo! 
 
-## 5. Fixing conflicts
+### Working together, fixing conflicts
 
 - Now together with your partner pick a common line and edit it in different ways so you will have two distinct versions.
 - First `git pull origin master` to sync with remote repo.
@@ -53,11 +68,13 @@ Congratulations! you have now contributed to a shared collaborative repo!
 - What happened?
 
 Can you fix your first **conflict**?
-
-
+See [Github
+Help](https://help.github.com/en/articles/resolving-a-merge-conflict-using-the-command-line)
+to fix the conflict. 
 
 
 ## 3. Fork and pull
+
 To get your changes incorporated into someone else's repo that you are not an official *collaborator* on requires us to first **fork** the original repo, then **clone** it to your local computer, make and commit your changes and finally submit something called a **pull request**.
 
 Like many things in the computing world this sounds more complicated than it really is so lets start by **forking** this repo - All this does is create a completely separate copy of the repo under **YOUR** GitHub account.
@@ -67,7 +84,7 @@ Like many things in the computing world this sounds more complicated than it rea
 
 - Now after a short time you should be taken to a new webpage displaying your OWN fork (i.e. your personal copy) of the repo under your GitHub account.
 
-- Examine this forked repo. It should look excately the same as the origional but with the subtle "forked from bioboot/demo2-github" note under the title.
+- Examine this forked repo. It should look excately the same as the origional but with the subtle "forked from hyunminkang/bioboot-demo-2019" note under the title.
 
 - We will now clone this forked repo to your local computer by using the link provided from clicking the somewhat obscure **copy icon** (see image below for an example of the clipboard like icon GitHub like to use).
 
@@ -76,7 +93,7 @@ Like many things in the computing world this sounds more complicated than it rea
 -  When cloning on your computer this time we will add a different destination name of **"myForkedCopy"** after the https address so as to help avoid potential confusion with the repo from step one above. For example:  
 
 ```
-    git clone https://github.com/YOUR-USERNAME/demo2-github.git myForkedCopy
+    git clone https://github.com/YOUR-USERNAME/bioboot-demo-2019.git
 ```
 
 - Now, you have a local clone of the forked repo on your computer in a new directory named **myForkedCopy**.
@@ -84,11 +101,12 @@ Like many things in the computing world this sounds more complicated than it rea
 - Lets cd into this directory and edit the file **JustOneThing.md** with nano or other means to add your name and a comment (see below). 
 
 ```
-    cd myForkedCopy
-    #echo “**Barry**:  Git and GitHub has a step learning curve” >> JustOneThing.md
+    cd bioboot-demo-2019
+    # echo “**Hyun Min Kang**:  Git and GitHub has a step learning curve” >> JustOneThing.md
 ```
 
-For example, add YOUR first name in bold (i.e. surrounded by two starts on either side) and one thing that was not completely clear from todays class thus far (e.g. "staging area", "remote repos" or "where is the coffee?").
+For example, add **YOUR first and last name** in bold (i.e. surrounded by
+two starts on either side), instead of _Hyun Min Kang_ and one thing that was not completely clear from todays class thus far (e.g. "staging area", "remote repos" or "where is the coffee?").
 
 
 - Once you have edited your file in nano go through the regular **git add/commit/push** steps, e.g.
@@ -99,13 +117,13 @@ For example, add YOUR first name in bold (i.e. surrounded by two starts on eithe
     git push origin master
 ```
 
-- Check that your changes are on-line in YOUR GitHub forked copy.
+- Check that your changes are online in YOUR GitHub forked copy.
 
 - Do a final check that your repo is uptodate with the origional repo from which you forked by doing a regular git pull but directed to the origional repo.
 
 ```
     # First set the original repo as a remote with the name "upstream" 
-    git remote add upstream https://github.com/bioboot/demo2-github.git
+    git remote add upstream https://github.com/hyunminkang/bioboot-demo-2019.git
 
     # List the location/address of your remotes
     git remote -v
@@ -116,7 +134,7 @@ For example, add YOUR first name in bold (i.e. surrounded by two starts on eithe
 
 ![pull request button](https://help.github.com/assets/images/help/pull_requests/pull-request-start-review-button.png)
 
-- On the subsequent **Comparing changes** page you may need to select the **base fork** as `bioboot/demo2-github` (this is the original repo) and the **head fork** as your **YourUserName/demo2-github** (YOUR forked repo with your committed change). 
+- On the subsequent **Comparing changes** page you may need to select the **base fork** as `hyunminkang/bioboot-demo-2019` (this is the original repo) and the **head fork** as your **YourUserName/bioboot-demo-2019** (YOUR forked repo with your committed change). 
 
 ![merge across forks](https://raw.githubusercontent.com/bioboot/demo2-github/master/pullrequest.png)  
 
@@ -138,6 +156,3 @@ At this stage please put your hand up or use the GREEN POST-IT NOTE from the fir
 #### Congratulations
 
 Congratulations! You have just contributed to this open source project ;)
-
-
-Test 
